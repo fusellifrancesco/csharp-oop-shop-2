@@ -12,12 +12,12 @@ namespace CSharpShop_2 {
         private double prezzo;
         private double IVA;
 
-        public Prodotto(string nome, string descrizione, double prezzo, double iVA) {
+        public Prodotto(string nome, string descrizione, double prezzo, double IVA) {
             this.codice = GeneraCodice();
             this.nome = nome;
             this.descrizione = descrizione;
             this.prezzo = Math.Round(prezzo, 2);
-            this.IVA = iVA;
+            this.IVA = IVA;
         }
 
         // GETTERS
