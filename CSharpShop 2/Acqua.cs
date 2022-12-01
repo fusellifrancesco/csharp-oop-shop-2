@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharpShop_2 {
-    public class Acqua : Prodotto{
+    public class Acqua : Prodotto {
 
         private double contenutoBottiglia;
         private string sorgente;
@@ -48,6 +48,9 @@ namespace CSharpShop_2 {
             if (acquaDaBere <= GetContenutoBottiglia() && acquaDaBere > 0) {
                 double acquaRimasta = GetContenutoBottiglia() - acquaDaBere;
                 this.contenutoBottiglia = acquaRimasta;
+            } else {
+                this.contenutoBottiglia = 0;
+                Console.WriteLine("Hai finito l'acqua!");
             }
         }
 

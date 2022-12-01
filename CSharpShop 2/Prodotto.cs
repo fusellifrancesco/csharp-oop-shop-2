@@ -85,7 +85,7 @@ namespace CSharpShop_2 {
             double prezzoIVA = (this.prezzo + (this.prezzo * this.IVA) / 100);
             prezzoIVA = Math.Round(prezzoIVA, 2);
             string prezzo = (prezzoIVA.ToString());
-            Console.WriteLine("Il prezzo base è: " + prezzo + " euro");
+            Console.WriteLine("Il prezzo con IVA è: " + prezzo + " euro");
         }
 
         public virtual void StampaProdotto() {
@@ -94,13 +94,13 @@ namespace CSharpShop_2 {
             Console.WriteLine(this.descrizione);
             Console.WriteLine("Il codice del prodotto è: " + this.codice);
             Console.WriteLine("Il prezzo del prodotto è: " + this.GetPrezzoIVA() + " euro");
-            Console.WriteLine("L'IVA inclusa è al: " + this.IVA);
+            Console.WriteLine("L'IVA inclusa è al: " + this.IVA + " %");
             Console.WriteLine();
             Console.WriteLine("Il NomeEsteso è: " + this.GetNomeEsteso());
             Console.WriteLine();
         }
 
-        public int GeneraCodice() {
+        private int GeneraCodice() {
             Random generatoreRandom = new Random();
             int numeroCodice = generatoreRandom.Next(999999);
             return numeroCodice;
