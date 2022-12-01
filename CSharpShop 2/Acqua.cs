@@ -51,7 +51,26 @@ namespace CSharpShop_2 {
             }
         }
 
+        public void Riempi(double litri) {
+            if (litri <= GetContenutoMaxBottiglia()) {
+                this.contenutoBottiglia = litri;
+            } else {
+                this.contenutoBottiglia = GetContenutoMaxBottiglia();
+                Console.WriteLine("Ti si è rovesciata l'acqua per terra!");
+            }
+        }
 
+        public void Svuota() {
+            this.contenutoBottiglia = 0;
+        }
+
+        public override void StampaProdotto() {
+            base.StampaProdotto();
+            Console.WriteLine("La sorgente di provenienza è: " + this.sorgente);
+            Console.WriteLine("Il contenuto della bottiglia è: " + this.contenutoBottiglia + " l");
+            Console.WriteLine("Il contenuto MAX della bottiglia è: " + this.contenutoMaxBottiglia + " l");
+            Console.WriteLine();
+        }
 
 
     }

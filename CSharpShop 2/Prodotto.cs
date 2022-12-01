@@ -88,7 +88,7 @@ namespace CSharpShop_2 {
             Console.WriteLine("Il prezzo base è: " + prezzo + " euro");
         }
 
-        public  void StampaProdotto() {
+        public virtual void StampaProdotto() {
             Console.WriteLine("------ " + this.nome + " ------");
             Console.WriteLine();
             Console.WriteLine(this.descrizione);
